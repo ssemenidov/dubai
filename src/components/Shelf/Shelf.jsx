@@ -91,7 +91,13 @@ export function Shelf({
         },
       },
       {
-        breakpoint: 750,
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 800,
         settings: {
           slidesToShow: 2,
         },

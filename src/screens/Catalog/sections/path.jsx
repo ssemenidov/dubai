@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import r_arrow from "./arrow-right.svg";
 
 function PathComponent({
   no_name,
@@ -38,10 +39,7 @@ function PathComponent({
     <Container style={{ ...style }}>
       <Header>
         <Title href="catalog">Catalog</Title>
-        <Image
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/67de30b06c567de2c64449add9c1927db510ce3ca1e41a128e2102e4d28dabc3?apiKey=edb17ceee00945b7af64d5297daca579&"
-        />
+        <Image loading="lazy" src={r_arrow} />
         <Subtitle href={link}>{name}</Subtitle>
       </Header>
       {no_name != true && (

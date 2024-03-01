@@ -3,6 +3,7 @@ import styled from "styled-components";
 import like from "./like.svg";
 import { CURRENCY } from "../../../const";
 import axios from "axios";
+import b_arrow from "./bottom-arrow.svg";
 import { useSearchParams } from "react-router-dom";
 import { Context, SERVER_URL } from "../../../const";
 import { Slider, RangeSlider, Row, Col, InputGroup, InputNumber } from "rsuite";
@@ -256,10 +257,7 @@ function ProductFilter(props) {
             Price
             {props.Price.length != 0 && <FilterCount>1 filtr</FilterCount>}
           </FilterSubtitle>
-          <Image2
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/968a5580497a31c1751e51561759e250ba17399db9afd9fe5c252edae4a5847b?apiKey=edb17ceee00945b7af64d5297daca579&"
-          />
+          <Image2 loading="lazy" src={b_arrow} />
         </FilterSelect>
         <FilterChoice
           style={{
@@ -345,10 +343,7 @@ function ProductFilter(props) {
               <FilterCount>{props.Colors.length} filtr</FilterCount>
             )}
           </FilterSubtitle>
-          <Image2
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/968a5580497a31c1751e51561759e250ba17399db9afd9fe5c252edae4a5847b?apiKey=edb17ceee00945b7af64d5297daca579&"
-          />
+          <Image2 loading="lazy" src={b_arrow} />
         </FilterSelect>
         <FilterChoice
           style={{
@@ -408,10 +403,7 @@ function ProductFilter(props) {
               <FilterCount>{props.Sizes.length} filtr</FilterCount>
             )}
           </FilterSubtitle>
-          <Image2
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/968a5580497a31c1751e51561759e250ba17399db9afd9fe5c252edae4a5847b?apiKey=edb17ceee00945b7af64d5297daca579&"
-          />
+          <Image2 loading="lazy" src={b_arrow} />
         </FilterSelect>
 
         <FilterChoice
@@ -462,10 +454,7 @@ function ProductFilter(props) {
               <FilterCount>{props.Type.length} filtr</FilterCount>
             )}
           </FilterSubtitle>
-          <Image2
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/968a5580497a31c1751e51561759e250ba17399db9afd9fe5c252edae4a5847b?apiKey=edb17ceee00945b7af64d5297daca579&"
-          />
+          <Image2 loading="lazy" src={b_arrow} />
         </FilterSelect>
 
         <FilterChoice

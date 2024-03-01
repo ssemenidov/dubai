@@ -84,6 +84,7 @@ export function Brands(brand) {
         <Categry
           key={i.id}
           href={i.link}
+          className={"class" + brand.attributes.banner.length.toString()}
           style={{
             // gridArea: hash[i.id],
             background: `
@@ -239,6 +240,17 @@ const Categry = styled.a`
   @media (max-width: 1000px) {
     border-radius: 12px;
   }
+
+  &.class3:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  &.class2:nth-child(3) {
+    grid-row: span 2;
+  }
+  &.class2:nth-child(2) {
+    grid-row: span 2;
+  }
 `;
 
 const VerticalSliderContainer = styled.div`
@@ -251,6 +263,7 @@ const VerticalSliderContainer = styled.div`
     margin-top: 22px;
     width: 100%;
   }
+
   & > .shelf {
     display: none;
     width: 100%;

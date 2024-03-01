@@ -21,7 +21,7 @@ export function Plus({ mobile = false }) {
       <style jsx="true">
         {`
           .plus-mobile {
-            @media (max-width: 600px) {
+            @media (max-width: 800px) {
               width: 14px;
               height: 14px;
             }

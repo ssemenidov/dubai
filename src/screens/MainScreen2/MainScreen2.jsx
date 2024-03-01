@@ -200,15 +200,52 @@ const Section = styled.div`
 
 const FirstGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(6, minmax(200px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
   gap: 20px;
   grid-auto-rows: 190px;
   @media (max-width: 600px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(auto-fill, 180px);
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
   }
-  & > div {
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  & > a {
     grid-column: span 2;
+    height: 190px;
+  }
+
+  & > span {
+    grid-column: span 2;
+  }
+  @media (max-width: 1200px) {
+    & a:last-child:nth-child(2n - 1) {
+      grid-column-end: -2;
+    }
+
+    & a:nth-last-child(2):nth-child(2n + 1) {
+      grid-column-end: 4;
+    }
+
+    /* Dealing with single orphan */
+
+    & a:last-child:nth-child(2n - 2) {
+      grid-column-end: 5;
+    }
+  }
+  & a:last-child:nth-child(3n - 1) {
+    grid-column-end: -2;
+  }
+
+  & a:nth-last-child(2):nth-child(3n + 1) {
+    grid-column-end: 4;
+  }
+
+  /* Dealing with single orphan */
+
+  & a:last-child:nth-child(3n - 2) {
+    grid-column-end: 5;
   }
 `;
 
@@ -221,6 +258,7 @@ const ThirdGrid = styled.div`
   /* grid-template-rows: repeat(auto-fill, 400px); */
   /* grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); */
   gap: 20px;
+
   @media (max-width: 1020px) {
     grid-template-areas: "a" "." " .";
     grid-template-columns: 1fr;

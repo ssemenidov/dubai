@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
 import { Header } from "../../components/header";
-import PathComponent from "./sections/path";
 import { Banner } from "../../components/Banner/Banner";
-import ProductFilter from "./sections/filter";
 import { SmallItemCard } from "../../components/Element";
 import { Footer } from "../../components/footer/footer";
 import { Shelf } from "../../components/Shelf/Shelf";

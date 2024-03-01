@@ -28,6 +28,7 @@ var settings = {
   slidesToScroll: 1,
   swipeToSlide: true,
   autoplay: true,
+  variableWidth: true,
   responsive: [
     {
       breakpoint: 900,
@@ -70,7 +71,7 @@ export function ShelfBrands() {
           .map((b) => (
             <InsideShelf href={`/catalog/all?brand=${b.id}`}>
               <img
-                style={{ width: "100%", height: "100%" }}
+                // style={{ width: "100%", height: "100%" }}
                 src={`${SERVER_URL}${b.attributes.logo.data.attributes.formats.small.url}`}
               />
             </InsideShelf>
@@ -93,12 +94,21 @@ export function ShelfBrands() {
 }
 
 const Container = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
   & .carousel-brands {
     outline: none;
+    width: calc(27px * 5 + 3 * 180px);
+    height: 180px;
     // overflow: hidden;
-    margin: 85px 18%;
-    @media (max-width: 820px) {
-      margin: 35px 10%;
+    margin: 85px 0;
+    transform: translateX(-13px);
+    @media (max-width: 1000px) {
+      margin: 35px 0;
+      width: calc(27px * 5 + 3 * 120px);
+      height: 120px;
     }
     @media (max-width: 600px) {
       display: none;
@@ -129,6 +139,11 @@ const InsideShelf = styled.a`
 
   & img {
     aspect-ratio: 1/1;
+    width: 180px;
+    @media (max-width: 1000px) {
+      width: 120px;
+      border-radius: 16px;
+    }
     border-radius: 32px;
     @media (max-width: 600px) {
       border-radius: 16px;
