@@ -120,6 +120,10 @@ const CartItem = styled.div`
       width: 100%;
     }
   }
+
+  & .sum {
+    width: 130px;
+  }
 `;
 
 const GrayText = styled.div`
@@ -211,7 +215,7 @@ const BoldText = styled.div`
 
   &.sum {
     font-size: 24px;
-    width: max-content;
+    width: 130px;
   }
 `;
 
